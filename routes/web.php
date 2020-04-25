@@ -18,10 +18,28 @@ Route::get('/productCategory','productController@product_category');
 // Route::get('/{any}', function () {
 //     return view('index');
 // });
+// Route::get('/command', function () {
+	
+// 	/* php artisan migrate */
+//     \Artisan::call('cache:clear');
+//     \Artisan::call('view:clear');
+//     \Artisan::call('config:clear');
+//     \Artisan::call('route:clear');
+//     // \Artisan::call('optimize');
+//     dd("Done");
+// });
+Route::get('{path}','indexController@index', function(){
+    \Artisan::call('cache:clear');
+    \Artisan::call('view:clear');
+    \Artisan::call('config:clear');
+    \Artisan::call('route:clear');
+    // \Artisan::call('optimize');
+    dd("Done"); 
+})->where('path','([A-z\d\-\/_.]+)?');
 Auth::routes();
-Route::get("/{any}", function(){
-    return view('index');
-})->where('any','.*');
+// Route::get("/{any}", function(){
+//     return view('index');
+// })->where('any','.*');
 
 
 

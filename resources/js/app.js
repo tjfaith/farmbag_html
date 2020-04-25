@@ -7,10 +7,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import VueRouter from 'vue-router'
-import axios from 'axios'
+import VueRouter from 'vue-router';
+import axios from 'axios';
 
-Vue.use(VueRouter, axios)
+Vue.use(VueRouter, axios);
 // Vue.component('farm-home',require('./components/home.vue'));
 const routes=[
     {path:'/',component:require('./components/home.vue').default}
