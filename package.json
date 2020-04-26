@@ -28,6 +28,7 @@
     "dependencies": {
         "animate.css": "^3.7.2",
         "font-awesome": "^4.7.0",
+        "laravel-elixir-vue-2": "^0.3.0",
         "vue-axios": "^2.1.5",
         "vue-router": "^3.1.6"
     }
